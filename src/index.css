@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Inter';
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+    font-weight: 400 800;
+  }
+  
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+    font-weight: 400 600;
+  }
+  
+  html {
+    @apply font-sans antialiased;
+  }
+  
+  body {
+    @apply bg-neutral-950 text-neutral-50 min-h-screen;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .card {
+    @apply relative flex items-center justify-center rounded-xl border-2 shadow-lg transition-all duration-300 ease-in-out;
+    aspect-ratio: 2.5 / 3.5;
+  }
+  
+  .card-hearts, .card-diamonds {
+    @apply bg-secondary-900 border-secondary-500 text-secondary-500;
+  }
+  
+  .card-spades, .card-clubs {
+    @apply bg-neutral-900 border-neutral-300 text-neutral-300;
+  }
+  
+  .card-back {
+    @apply bg-accent-900 border-accent-500;
+    background-image: linear-gradient(135deg, rgba(157, 0, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(157, 0, 255, 0.1) 50%, rgba(157, 0, 255, 0.1) 75%, transparent 75%, transparent);
+    background-size: 10px 10px;
+  }
+  
+  .card-playable {
+    @apply cursor-pointer border-primary-500 shadow-glow-primary;
+  }
+  
+  .card-invalid {
+    @apply border-secondary-500 opacity-50;
+  }
+  
+  .container-panel {
+    @apply bg-neutral-900/80 backdrop-blur-sm border border-neutral-700 rounded-lg p-4 shadow-lg;
+  }
+  
+  .button {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 ease-in-out;
+  }
+  
+  .button-primary {
+    @apply bg-primary-600 hover:bg-primary-500 text-neutral-950;
+  }
+  
+  .button-secondary {
+    @apply bg-secondary-600 hover:bg-secondary-500 text-neutral-50;
+  }
+  
+  .button-accent {
+    @apply bg-accent-600 hover:bg-accent-500 text-neutral-50;
+  }
+  
+  .glow-text {
+    @apply font-bold;
+    text-shadow: 0 0 10px currentColor;
+  }
+}
