@@ -4,7 +4,7 @@ const Hero = () => {
       <div className="max-w-5xl mx-auto">
         <div className="text-center">
           <img
-            src="https://randomuser.me/api/portraits/men/32.jpg"
+            src="https://api.dicebear.com/7.x/adventurer/svg?seed=man"
             alt="Profile"
             className="mx-auto mb-4 w-32 h-32 rounded-full object-cover border-4 border-blue-200 shadow-lg"
           />
