@@ -11,7 +11,11 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
+HEAD
     "Emit": true,
+=======
+    "composite": true,
+76abf45 (Fix: add composite true to tsconfig.node.json for Vercel build)
 
     /* Linting */
     "strict": true,
