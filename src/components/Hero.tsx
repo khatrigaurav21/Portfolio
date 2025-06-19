@@ -4,7 +4,7 @@ const Hero = () => {
       <div className="max-w-5xl mx-auto">
         <div className="text-center">
           <img
-            src="/profile.jpeg"
+            src="https://unsplash.com/illustrations/back-view-of-man-in-headphones-working-with-computer-and-creating-website-in-flat-style-isolated-on-white-background-vector-illustration-of-blogger-writer-or-freelancer-concept-design-I-BCadIoj00"
             alt="Profile"
             className="mx-auto mb-4 w-32 h-32 rounded-full object-cover border-4 border-blue-200 shadow-lg"
           />
