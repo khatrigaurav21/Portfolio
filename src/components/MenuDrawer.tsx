@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { User, FileText, Briefcase, X, ArrowRight } from 'lucide-react';
+import { User, Briefcase, X, ArrowRight } from 'lucide-react';
 
 const projects = [
   {

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Hero = () => {
   return (
     <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
