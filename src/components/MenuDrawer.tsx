@@ -87,10 +87,17 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ open, onClose }) => {
             </ul>
           </div>
 
-          {/* Capsule 3: Upcoming Projects */}
+          {/* Capsule 3: Writings */}
           <div className="bg-white rounded-2xl shadow p-4 flex flex-col gap-2">
-            <div className="text-gray-700 text-xs uppercase tracking-widest font-bold mb-2">Upcoming Projects</div>
-            <div className="text-gray-400 text-base italic">Stay tuned for more exciting work!</div>
+            <div className="text-gray-700 text-xs uppercase tracking-widest font-bold mb-2">Writings</div>
+            <a
+              href="https://medium.com/@khatri.gaurav_52663/the-golden-nugget-that-turned-into-fools-gold-a212d7bf1ec0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 text-base font-semibold hover:underline"
+            >
+              The Golden Nugget That Turned Into Fool's Gold (Medium)
+            </a>
           </div>
         </div>
       </aside>
