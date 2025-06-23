@@ -14,17 +14,17 @@ const articles: Article[] = [
     title: "The Provider's Prison: When Everyone's Counting On You",
     category: "Personal Growth",
     description: "A personal reflection on the pressures of being the person everyone relies on, and the path to breaking free.",
-    date: "October 26, 2023",
+    date: "June 23,2025",
     readTime: "5 Min Read",
     link: "https://medium.com/@khatri.gaurav_52663/the-providers-prison-when-everyone-s-counting-on-you-0f5de3565971"
   },
   {
     title: "The Golden Nugget That Turned Into Fool's Gold",
-    category: "Product Management",
-    description: "Placeholder description.",
-    date: "Date",
-    readTime: "Time",
-    link: "#"
+    category: "Personal Growth",
+    description: "A personal reflection on the pressures of being the person everyone relies on, and the path to breaking free",
+    date: "June 20, 2025",
+    readTime: "3 Min Read",
+    link: "https://medium.com/@khatri.gaurav_52663/the-golden-nugget-that-turned-into-fools-gold-a212d7bf1ec0"
   }
 ];
 
@@ -38,21 +38,25 @@ const Writing = () => {
             See all &rarr;
           </Link>
         </div>
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {articles.slice(0, 2).map((article, index) => (
-            <article key={index} className="border-b border-gray-200 pb-8 last:border-0">
-              <a href={article.link} className="block hover:opacity-75 transition-opacity" target="_blank" rel="noopener noreferrer">
-                <div className="flex items-center text-sm text-gray-500 mb-2">
-                  <span className="font-medium text-gray-900">{article.category}</span>
-                  <span className="mx-2">•</span>
-                  <span>{article.date}</span>
-                  <span className="mx-2">•</span>
-                  <span>{article.readTime}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{article.title}</h3>
-                <p className="text-gray-600">{article.description}</p>
-              </a>
-            </article>
+            <a 
+              key={index}
+              href={article.link} 
+              className="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-lg hover:scale-[1.03] transition-transform duration-200 cursor-pointer border border-transparent hover:border-blue-500 active:scale-100 flex flex-col h-full"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <div className="flex items-center text-sm text-gray-500 mb-2">
+                <span className="font-medium text-gray-900">{article.category}</span>
+                <span className="mx-2">•</span>
+                <span>{article.date}</span>
+                <span className="mx-2">•</span>
+                <span>{article.readTime}</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{article.title}</h3>
+              <p className="text-gray-600">{article.description}</p>
+            </a>
           ))}
         </div>
       </div>

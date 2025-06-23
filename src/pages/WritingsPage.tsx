@@ -14,17 +14,17 @@ const articles: Article[] = [
         title: "The Provider's Prison: When Everyone's Counting On You",
         category: "Personal Growth",
         description: "A personal reflection on the pressures of being the person everyone relies on, and the path to breaking free.",
-        date: "October 26, 2023",
+        date: "June 23, 2025",
         readTime: "5 Min Read",
         link: "https://medium.com/@khatri.gaurav_52663/the-providers-prison-when-everyone-s-counting-on-you-0f5de3565971"
       },
       {
         title: "The Golden Nugget That Turned Into Fool's Gold",
-        category: "Product Management",
+        category: "Personal Growth",
         description: "Placeholder description.",
-        date: "Date",
-        readTime: "Time",
-        link: "#"
+        date: "June 20, 2025",
+        readTime: "3 Min Read",
+        link: "https://medium.com/@khatri.gaurav_52663/the-golden-nugget-that-turned-into-fools-gold-a212d7bf1ec0"
       }
 ];
 
