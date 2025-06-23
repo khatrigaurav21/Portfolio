@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    title: "The Provider's Prison: When Everyone's Counting On You",
+    category: "Personal Growth",
+    description: "A personal reflection on the pressures of being the person everyone relies on, and the path to breaking free.",
+    date: "October 26, 2023",
+    readTime: "5 Min Read",
+    link: "https://medium.com/@khatri.gaurav_52663/the-providers-prison-when-everyone-s-counting-on-you-0f5de3565971"
+  },
+  {
     title: "What can we learn from that time Homer Simpson designed a car?",
     category: "Product Management",
     description: "What can Homer Simpson teach us? Usually not much – but there's actually quite a bit we can learn from that one time he designed a car.",
