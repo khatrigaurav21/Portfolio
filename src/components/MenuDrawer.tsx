@@ -25,6 +25,17 @@ const projects = [
   }
 ];
 
+const articles = [
+  {
+    title: "The Provider's Prison: When Everyone's Counting On You",
+    link: "https://medium.com/@khatri.gaurav_52663/the-providers-prison-when-everyone-s-counting-on-you-0f5de3565971"
+  },
+  {
+    title: "The Golden Nugget That Turned Into Fool's Gold",
+    link: "https://medium.com/@khatri.gaurav_52663/the-golden-nugget-that-turned-into-fools-gold-a212d7bf1ec0"
+  }
+];
+
 interface MenuDrawerProps {
   open: boolean;
   onClose: () => void;
@@ -89,15 +100,26 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ open, onClose }) => {
 
           {/* Capsule 3: Writings */}
           <div className="bg-white rounded-2xl shadow p-4 flex flex-col gap-2">
-            <div className="text-gray-700 text-xs uppercase tracking-widest font-bold mb-2">Writings</div>
-            <a
-              href="https://medium.com/@khatri.gaurav_52663/the-golden-nugget-that-turned-into-fools-gold-a212d7bf1ec0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 text-base font-semibold hover:underline"
-            >
-              The Golden Nugget That Turned Into Fool's Gold (Medium)
-            </a>
+            <div className="flex items-center justify-between mb-2">
+              <div className="text-gray-700 text-xs uppercase tracking-widest font-bold">Writings</div>
+              <Link to="/writing" className="text-blue-600 text-xs font-semibold flex items-center gap-1 hover:underline" onClick={onClose}>
+                See all <ArrowRight size={14} />
+              </Link>
+            </div>
+            <ul className="flex flex-col gap-1">
+              {articles.map((article, index) => (
+                <li key={index}>
+                  <a
+                    href={article.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col px-3 py-2 rounded-lg hover:bg-gray-50 transition text-gray-800"
+                  >
+                    <span className="font-semibold text-base">{article.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </aside>
