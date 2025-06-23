@@ -21,7 +21,7 @@ const articles: Article[] = [
   {
     title: "The Golden Nugget That Turned Into Fool's Gold",
     category: "Personal Growth",
-    description: "A personal reflection on the pressures of being the person everyone relies on, and the path to breaking free",
+    description: "A personal reflection on the rille effects of chasing the golden nugget, and the path to breaking free",
     date: "June 20, 2025",
     readTime: "3 Min Read",
     link: "https://medium.com/@khatri.gaurav_52663/the-golden-nugget-that-turned-into-fools-gold-a212d7bf1ec0"
