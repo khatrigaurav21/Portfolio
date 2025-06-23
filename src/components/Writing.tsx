@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 interface Article {
   title: string;
   category: string;
@@ -46,11 +48,16 @@ const Writing = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Latest Writing</h2>
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-3xl font-bold text-gray-900">Latest Writing</h2>
+          <Link to="/writing" className="text-blue-600 hover:text-blue-800">
+            See all &rarr;
+          </Link>
+        </div>
         <div className="space-y-8">
-          {articles.map((article, index) => (
+          {articles.slice(0, 2).map((article, index) => (
             <article key={index} className="border-b border-gray-200 pb-8 last:border-0">
-              <a href={article.link} className="block hover:opacity-75 transition-opacity">
+              <a href={article.link} className="block hover:opacity-75 transition-opacity" target="_blank" rel="noopener noreferrer">
                 <div className="flex items-center text-sm text-gray-500 mb-2">
                   <span className="font-medium text-gray-900">{article.category}</span>
                   <span className="mx-2">•</span>
