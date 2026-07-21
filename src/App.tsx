@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProjectsHomeSection from './components/ProjectsHomeSection';
+import SkillsBand from './components/SkillsBand';
 import Writing from './components/Writing';
 import ProjectsPage from './pages/ProjectsPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
@@ -19,6 +20,7 @@ function App() {
               <>
                 <Hero />
                 <ProjectsHomeSection />
+                <SkillsBand />
                 <Writing />
               </>
             } />
