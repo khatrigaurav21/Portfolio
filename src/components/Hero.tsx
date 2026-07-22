@@ -1,12 +1,10 @@
-import profilePhoto from '../../profile.jpeg';
-
 const Hero = () => {
   return (
     <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <div className="text-center">
           <img
-            src={profilePhoto}
+            src="/profile.jpeg"
             alt="Gaurav Khatri"
             className="mx-auto mb-4 w-32 h-32 rounded-full object-cover border-4 border-blue-200 shadow-lg"
           />
