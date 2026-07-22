@@ -28,34 +28,32 @@ const articles: Article[] = [
   }
 ];
 
+/*
+  Demoted from a full two-card feature section to a slim, secondary strip.
+  This keeps the homepage focused on the PM/BA case studies (what recruiters
+  scan for first) while still surfacing your writing for anyone who wants it.
+  If you add PM/BA-relevant posts later, consider promoting this section back up.
+*/
 const Writing = () => {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
+    <section className="py-10 px-4 sm:px-6 lg:px-8 bg-gray-50 border-t border-gray-100">
       <div className="max-w-5xl mx-auto">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold text-gray-900">Latest Writing</h2>
-          <Link to="/writing" className="text-blue-600 hover:text-blue-800">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold text-gray-700">Writing</h2>
+          <Link to="/writing" className="text-sm text-blue-600 hover:text-blue-800">
             See all &rarr;
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col sm:flex-row gap-3">
           {articles.slice(0, 2).map((article, index) => (
-            <a 
+            <a
               key={index}
-              href={article.link} 
-              className="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-lg hover:scale-[1.03] transition-transform duration-200 cursor-pointer border border-transparent hover:border-blue-500 active:scale-100 flex flex-col h-full"
-              target="_blank" 
+              href={article.link}
+              className="flex-1 text-sm text-gray-600 hover:text-gray-900 underline decoration-gray-300 underline-offset-4"
+              target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="flex items-center text-sm text-gray-500 mb-2">
-                <span className="font-medium text-gray-900">{article.category}</span>
-                <span className="mx-2">•</span>
-                <span>{article.date}</span>
-                <span className="mx-2">•</span>
-                <span>{article.readTime}</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{article.title}</h3>
-              <p className="text-gray-600">{article.description}</p>
+              {article.title}
             </a>
           ))}
         </div>
@@ -64,4 +62,4 @@ const Writing = () => {
   );
 };
 
-export default Writing; 
+export default Writing;

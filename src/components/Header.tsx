@@ -3,6 +3,12 @@ import { Menu as MenuIcon } from 'lucide-react';
 import MenuDrawer from './MenuDrawer';
 import { useState } from 'react';
 
+const navLinks = [
+  { to: '/projects', label: 'Projects' },
+  { to: '/resume', label: 'Resume' },
+  { to: '/writing', label: 'Writing' }
+];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -13,8 +19,23 @@ const Header = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="text-xl font-semibold">Gaurav Khatri</Link>
           </div>
+
+          {/* Visible nav for larger screens so key pages are one click away */}
+          <div className="hidden sm:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="text-sm font-medium text-gray-600 hover:text-gray-900"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Hamburger stays for mobile, and as a secondary entry point on desktop */}
           <button
-            className="text-gray-600 hover:text-gray-900 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mr-2 sm:mr-4 lg:mr-6"
+            className="sm:hidden text-gray-600 hover:text-gray-900 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mr-2"
             onClick={() => setIsMenuOpen(true)}
             aria-label="Open menu"
           >
@@ -27,4 +48,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;

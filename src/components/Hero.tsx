@@ -1,11 +1,13 @@
+import profilePhoto from '../../profile.jpeg';
+
 const Hero = () => {
   return (
     <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <div className="text-center">
           <img
-            src="https://api.dicebear.com/7.x/adventurer/svg?seed=man"
-            alt="Profile"
+            src={profilePhoto}
+            alt="Gaurav Khatri"
             className="mx-auto mb-4 w-32 h-32 rounded-full object-cover border-4 border-blue-200 shadow-lg"
           />
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-2">
@@ -41,9 +43,9 @@ const Hero = () => {
             My work spans project management, stakeholder engagement, risk and compliance, and process automation — across fast-paced, regulated environments. I'm now focused on roles in Project Management and Business Analysis, where I can use my leadership, analytical mindset, and delivery experience to make a meaningful impact.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <a 
-              href="https://www.linkedin.com/in/kha3gaurav" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/kha3gaurav"
+              target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
             >
@@ -63,4 +65,4 @@ const Hero = () => {
   );
 };
 
-export default Hero; 
+export default Hero;
