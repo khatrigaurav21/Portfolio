@@ -10,7 +10,7 @@ import ScrollProgress from './components/ScrollProgress';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0b0e14]">
+    <div className="min-h-screen bg-ink">
       <Header />
       <ScrollProgress />
       <main>

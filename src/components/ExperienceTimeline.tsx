@@ -12,6 +12,7 @@ const ExperienceTimeline = () => {
 
   return (
     <section id="experience" className="px-6 sm:px-10 lg:px-20 py-24">
+      <div className="max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +41,7 @@ const ExperienceTimeline = () => {
               transition={{ duration: 0.5 }}
               className="relative pl-10"
             >
-              <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-[#0b0e14] border-2 border-amber-400" />
+              <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-ink border-2 border-amber-400" />
               <p className="text-xs text-gray-500 mb-1">{role.timeline} &middot; {role.location}</p>
               <h3 className="text-lg font-medium text-white">{role.role}</h3>
               <p className="text-sm text-amber-400/90 mb-3">{role.company}</p>
@@ -56,6 +57,7 @@ const ExperienceTimeline = () => {
             </motion.div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

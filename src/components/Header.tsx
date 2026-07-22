@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-300 ${
-        scrolled ? 'bg-[#0b0e14]/90 backdrop-blur border-b border-white/10' : 'bg-transparent'
+        scrolled ? 'bg-ink/90 backdrop-blur border-b border-white/10' : 'bg-transparent'
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-20 h-16 flex items-center justify-between">
@@ -52,7 +52,7 @@ const Header = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="sm:hidden fixed inset-0 bg-[#0b0e14] z-50 flex flex-col"
+            className="sm:hidden fixed inset-0 bg-ink z-50 flex flex-col"
           >
             <div className="flex justify-end p-6">
               <button onClick={() => setMenuOpen(false)} aria-label="Close menu" className="text-gray-300">

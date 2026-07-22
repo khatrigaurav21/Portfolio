@@ -5,6 +5,7 @@ import { contact } from '../data/profile';
 const ContactSection = () => {
   return (
     <section id="contact" className="px-6 sm:px-10 lg:px-20 py-28">
+      <div className="max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -30,6 +31,7 @@ const ContactSection = () => {
           </a>
         </div>
       </motion.div>
+      </div>
     </section>
   );
 };

@@ -81,36 +81,38 @@ const FeaturedWork = () => {
 
   return (
     <section id="work" className="px-6 sm:px-10 lg:px-20 py-24">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.5 }}
-        className="mb-14"
-      >
-        <p className="text-xs tracking-[0.2em] uppercase text-amber-400/90 mb-3">Featured work</p>
-        <h2 className="text-3xl sm:text-4xl font-medium text-white">Eight problems. Eight fixes. Real numbers.</h2>
-      </motion.div>
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.5 }}
+          className="mb-14"
+        >
+          <p className="text-xs tracking-[0.2em] uppercase text-amber-400/90 mb-3">Featured work</p>
+          <h2 className="text-3xl sm:text-4xl font-medium text-white">Eight problems. Eight fixes. Real numbers.</h2>
+        </motion.div>
 
-      <div className="space-y-4 mb-12">
-        {featured.map((project) => (
-          <ProjectRow key={project.id} project={project} big />
-        ))}
-      </div>
+        <div className="space-y-4 mb-12">
+          {featured.map((project) => (
+            <ProjectRow key={project.id} project={project} big />
+          ))}
+        </div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="text-xs uppercase tracking-widest text-gray-500 mb-4"
-      >
-        More work
-      </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-xs uppercase tracking-widest text-gray-500 mb-4"
+        >
+          More work
+        </motion.p>
 
-      <div className="border-t border-white/10">
-        {rest.map((project) => (
-          <ProjectRow key={project.id} project={project} />
-        ))}
+        <div className="border-t border-white/10">
+          {rest.map((project) => (
+            <ProjectRow key={project.id} project={project} />
+          ))}
+        </div>
       </div>
     </section>
   );

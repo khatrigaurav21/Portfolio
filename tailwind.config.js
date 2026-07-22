@@ -4,6 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        ink: '#0b0e14',
+        ivory: '#f5f5f2',
         primary: {
           50: '#E0FCFF',
           100: '#BFF9FF',

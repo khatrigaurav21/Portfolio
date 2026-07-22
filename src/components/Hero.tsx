@@ -14,62 +14,82 @@ const item = {
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-20 pt-28 pb-16 relative overflow-hidden">
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="max-w-3xl"
-      >
-        <motion.p variants={item} className="text-xs sm:text-sm tracking-[0.2em] uppercase text-amber-400/90 mb-6">
-          {hero.eyebrow}
-        </motion.p>
-
-        <motion.img
-          variants={item}
-          src="/profile.jpeg"
-          alt="Gaurav Khatri"
-          className="w-24 h-24 rounded-full object-cover border border-white/15 mb-6"
-        />
-
-        <motion.h1 variants={item} className="text-4xl sm:text-6xl font-medium text-white mb-6 leading-[1.1]">
-          {hero.name}
-        </motion.h1>
-
-        <motion.p variants={item} className="text-xl sm:text-2xl text-gray-200 mb-6 leading-snug max-w-2xl">
-          {hero.hook}
-        </motion.p>
-
-        {hero.body.map((paragraph, idx) => (
-          <motion.p key={idx} variants={item} className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-2xl mb-4">
-            {paragraph}
+    <section id="home" className="min-h-screen flex items-center px-6 sm:px-10 lg:px-20 pt-28 pb-16 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.p variants={item} className="text-xs sm:text-sm tracking-[0.2em] uppercase text-amber-400/90 mb-6">
+            {hero.eyebrow}
           </motion.p>
-        ))}
 
-        <motion.div variants={item} className="flex flex-wrap gap-4 mt-8">
-          <a
-            href="#work"
-            className="inline-flex items-center px-6 py-3 rounded-md bg-amber-400 text-gray-900 font-medium hover:bg-amber-300 transition-colors"
-          >
-            See the work
-          </a>
-          <a
-            href="/Resume.pdf"
-            download
-            className="inline-flex items-center px-6 py-3 rounded-md border border-white/20 text-white font-medium hover:bg-white/5 transition-colors"
-          >
-            Download resume
-          </a>
-          <a
-            href="https://www.linkedin.com/in/kha3gaurav"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 rounded-md border border-white/20 text-white font-medium hover:bg-white/5 transition-colors"
-          >
-            LinkedIn
-          </a>
+          <motion.h1 variants={item} className="text-4xl sm:text-6xl font-medium text-white mb-6 leading-[1.1]">
+            {hero.name}
+          </motion.h1>
+
+          <motion.p variants={item} className="text-xl sm:text-2xl text-gray-200 mb-6 leading-snug max-w-xl">
+            {hero.hook}
+          </motion.p>
+
+          {hero.body.map((paragraph, idx) => (
+            <motion.p key={idx} variants={item} className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl mb-4">
+              {paragraph}
+            </motion.p>
+          ))}
+
+          <motion.div variants={item} className="flex flex-wrap gap-4 mt-8">
+            <a
+              href="#work"
+              className="inline-flex items-center px-6 py-3 rounded-md bg-amber-400 text-gray-900 font-medium hover:bg-amber-300 transition-colors"
+            >
+              See the work
+            </a>
+            <a
+              href="/Resume.pdf"
+              download
+              className="inline-flex items-center px-6 py-3 rounded-md border border-white/20 text-white font-medium hover:bg-white/5 transition-colors"
+            >
+              Download resume
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kha3gaurav"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 rounded-md border border-white/20 text-white font-medium hover:bg-white/5 transition-colors"
+            >
+              LinkedIn
+            </a>
+          </motion.div>
         </motion.div>
-      </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.94 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
+          className="relative hidden lg:block"
+        >
+          <div className="absolute inset-0 bg-amber-400/10 blur-3xl rounded-full scale-90" aria-hidden="true" />
+          <motion.div
+            animate={{ y: [0, -14, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+            className="relative rounded-3xl overflow-hidden border border-white/10"
+            style={{ aspectRatio: '4 / 5' }}
+          >
+            <img
+              src="/profile.jpeg"
+              alt="Gaurav Khatri"
+              className="w-full h-full object-cover"
+            />
+            <div
+              className="absolute inset-0"
+              style={{ background: 'linear-gradient(180deg, rgba(11,14,20,0) 55%, rgba(11,14,20,0.85) 100%)' }}
+              aria-hidden="true"
+            />
+          </motion.div>
+        </motion.div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0 }}

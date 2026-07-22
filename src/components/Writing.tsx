@@ -19,6 +19,7 @@ const articles: Article[] = [
 const Writing = () => {
   return (
     <section id="writing" className="px-6 sm:px-10 lg:px-20 py-14 border-t border-white/10">
+      <div className="max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -41,6 +42,7 @@ const Writing = () => {
           ))}
         </div>
       </motion.div>
+      </div>
     </section>
   );
 };

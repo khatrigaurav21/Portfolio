@@ -13,6 +13,7 @@ const item = {
 const EducationSection = () => {
   return (
     <section id="education" className="px-6 sm:px-10 lg:px-20 py-24">
+      <div className="max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -54,6 +55,7 @@ const EducationSection = () => {
             ))}
           </div>
         </motion.div>
+      </div>
       </div>
     </section>
   );
