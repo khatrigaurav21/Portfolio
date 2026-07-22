@@ -1,42 +1,31 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import ProjectsHomeSection from './components/ProjectsHomeSection';
+import FeaturedWork from './components/FeaturedWork';
+import ExperienceTimeline from './components/ExperienceTimeline';
 import SkillsBand from './components/SkillsBand';
+import EducationSection from './components/EducationSection';
 import Writing from './components/Writing';
-import ProjectsPage from './pages/ProjectsPage';
-import ProjectDetailPage from './pages/ProjectDetailPage';
-import ResumePage from './pages/ResumePage';
-import WritingsPage from './pages/WritingsPage';
+import ContactSection from './components/ContactSection';
+import ScrollProgress from './components/ScrollProgress';
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-white">
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={
-              <>
-                <Hero />
-                <ProjectsHomeSection />
-                <SkillsBand />
-                <Writing />
-              </>
-            } />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
-            <Route path="/resume" element={<ResumePage />} />
-            <Route path="/writing" element={<WritingsPage />} />
-          </Routes>
-        </main>
-        <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
-          <div className="max-w-5xl mx-auto text-center text-gray-500">
-            <p>© {new Date().getFullYear()} Gaurav Khatri. All rights reserved.</p>
-          </div>
-        </footer>
-      </div>
-    </Router>
+    <div className="min-h-screen bg-[#0b0e14]">
+      <Header />
+      <ScrollProgress />
+      <main>
+        <Hero />
+        <FeaturedWork />
+        <ExperienceTimeline />
+        <SkillsBand />
+        <EducationSection />
+        <Writing />
+        <ContactSection />
+      </main>
+      <footer className="px-6 sm:px-10 lg:px-20 py-10 border-t border-white/10 text-center">
+        <p className="text-xs text-gray-600">© {new Date().getFullYear()} Gaurav Khatri. All rights reserved.</p>
+      </footer>
+    </div>
   );
 }
 

@@ -1,15 +1,26 @@
-import { toolkit } from '../data/projects';
+import { motion } from 'framer-motion';
+import { toolkit } from '../data/profile';
 
 const SkillsBand = () => {
+  const looped = [...toolkit, ...toolkit];
+
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-gray-100">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-4">Toolkit</h2>
-        <div className="flex flex-wrap gap-2">
-          {toolkit.map((skill) => (
+    <section id="skills" className="py-20 border-y border-white/10 overflow-hidden">
+      <motion.p
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-xs tracking-[0.2em] uppercase text-amber-400/90 mb-8 px-6 sm:px-10 lg:px-20"
+      >
+        The toolkit
+      </motion.p>
+
+      <div className="relative">
+        <div className="flex w-max marquee-track motion-reduce:animate-none">
+          {looped.map((skill, idx) => (
             <span
-              key={skill}
-              className="text-sm text-gray-800 bg-white border border-gray-200 px-4 py-1.5 rounded-full"
+              key={`${skill}-${idx}`}
+              className="mx-3 whitespace-nowrap text-lg sm:text-xl text-gray-500 border border-white/10 rounded-full px-6 py-2"
             >
               {skill}
             </span>

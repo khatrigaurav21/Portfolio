@@ -23,18 +23,18 @@ export const projects: Project[] = [
     company: 'Personal prototype, RBS-inspired',
     timeline: '2025',
     role: 'Builder',
-    tagline: 'No-code Zapier automation that replaced manual queue-checking for credit analysts.',
-    overview: 'Based on a real operational bottleneck I led through as Unit Lead at RBS: analysts had to manually monitor a shared case log throughout the day, then compile a weekly summary by hand. This prototype rebuilds that workflow with no-code tools to show what an automated version looks like end to end.',
+    tagline: 'Analysts were babysitting a spreadsheet all day. I built a bot to do it for them.',
+    overview: 'This one is personal. At RBS, analysts manually checked a shared case log all day, then compiled a weekly summary by hand. This prototype rebuilds that job with Zapier, so nobody has to do it again.',
     actions: [
       'Modeled the case log as a Google Sheet acting as a shared source of truth.',
       'Built a Zapier automation that watches for new or updated rows.',
-      'Routed real-time notifications to analysts and a rolling status summary to managers.',
-      'Documented the full reproduction steps and architecture for anyone to fork.'
+      'Routed real time alerts to analysts and a rolling summary to managers.',
+      'Documented the whole thing so anyone can rebuild it.'
     ],
     impact: [
-      'Eliminates manual queue-checking throughout the day.',
-      'Removes the end-of-week manual summary compilation.',
-      'Fully documented with a working demo, architecture diagram, and HOWTO.'
+      'No more manual queue checking, all day, every day.',
+      'No more end of week summary scramble.',
+      'Fully documented with a working demo and architecture diagram.'
     ],
     impactHighlight: 'Live demo + docs',
     skills: ['Zapier', 'Google Sheets', 'process automation', 'no-code tooling', 'documentation'],
@@ -49,20 +49,19 @@ export const projects: Project[] = [
     company: 'RBS',
     timeline: '2015 – 2018',
     role: 'Unit Lead',
-    tagline: 'Manual KYC and credit review were slowing acquisition and creating audit risk.',
-    overview: 'Onboarding clients at RBS involved a mix of manual paperwork, separate KYC tools, and inconsistent risk controls. This was slowing down acquisition and exposing the bank to audit risks.',
+    tagline: 'New clients meant paperwork, manual KYC, and a lot of risk. We digitized the whole thing.',
+    overview: 'Onboarding at RBS ran on paperwork, disconnected KYC tools, and inconsistent risk checks. Acquisition was slow and every audit made people nervous.',
     actions: [
-      'Co-led the development of a digital onboarding application with built-in KYC/AML checks, credit reviews, and approval workflows.',
-      'Collaborated with cross-regional stakeholders (UK, India) to align compliance needs.',
-      'Defined user stories, reviewed UI/UX flow, and coordinated UAT.',
-      'Designed training modules for 200+ users globally.',
-      'Monitored post-launch adoption and incident reporting.'
+      'Co-led a digital onboarding app with built in KYC and AML checks.',
+      'Aligned compliance across UK and India stakeholders.',
+      'Defined user stories, reviewed UX flow, and ran UAT.',
+      'Trained 200+ users globally.'
     ],
     impact: [
-      'Reduced new customer onboarding time by 30%.',
-      'Fraud losses dropped by 40% in the credit function.',
-      '98% user training satisfaction rate.',
-      'Application became a global template for other RBS markets.'
+      'Onboarding time down 30%.',
+      'Fraud losses down 40% in the credit function.',
+      '98% training satisfaction.',
+      'Became the template for other RBS markets.'
     ],
     impactHighlight: '-40% fraud loss',
     skills: ['Agile project delivery', 'stakeholder management', 'compliance', 'CRM integration', 'fraud control metrics', 'UI/UX feedback loops'],
@@ -75,43 +74,40 @@ export const projects: Project[] = [
     company: 'Illion Australia',
     timeline: '2019 – 2021',
     role: 'Account Manager',
-    tagline: 'No real-time visibility into account health meant retention was reactive, not proactive.',
-    overview: 'Client managers had no real-time visibility into account health or product usage. Retention was dropping due to reactive rather than proactive engagement.',
+    tagline: 'Account managers found out a client was unhappy the day they left. Not anymore.',
+    overview: 'Client health had no visibility. Retention stayed reactive instead of proactive, because nobody could see the warning signs in time.',
     actions: [
-      'Worked with the data and engineering teams to design Tableau dashboards for client performance tracking.',
-      'Dashboards tracked usage, churn signals, and pending deliverables.',
-      'Trained internal teams and C-level clients on using the tool.',
-      'Integrated client feedback into dashboard iterations to improve usability.'
+      'Designed Tableau dashboards tracking usage and churn signals.',
+      'Trained internal teams and C-level clients on the tool.',
+      'Iterated on the design from real client feedback.'
     ],
     impact: [
-      '30% increase in client retention attributed to better engagement and response times.',
-      'Decision-makers could act faster on early risk indicators.',
-      'Improved alignment between sales, service, and delivery functions.'
+      'Retention up 30%.',
+      'Faster action on early risk signals.',
+      'Better alignment across sales, service, and delivery.'
     ],
     impactHighlight: '+30% retention',
-    skills: ['Tableau', 'client success management', 'cross-functional coordination', 'data storytelling', 'executive presentations'],
+    skills: ['Tableau', 'Power BI', 'client success management', 'cross-functional coordination', 'data storytelling'],
     featured: true,
     order: 3
   },
   {
     id: 'project-1',
-    title: 'Slack bot implementation',
+    title: 'Slack bot for internal support',
     company: 'Betfair',
     timeline: 'Dec 2024 – Mar 2025',
     role: 'Customer Service Team Lead',
-    tagline: 'A manual Slack process for internal queries caused delays and inconsistent handling.',
-    overview: 'To improve operational efficiency in a fast-paced betting environment, Betfair’s customer service team needed a more streamlined way to resolve internal queries. The manual Slack channel process led to delays, lost requests, and inconsistent communication.',
+    tagline: 'Support tickets sat in a Slack channel like a junk drawer. I built a bot to sort it.',
+    overview: 'Internal support ran through one chaotic Slack channel. Requests got lost, urgent ones sat next to trivial ones, and nobody owned the queue.',
     actions: [
-      'Identified repeat patterns in agent queries and common escalation bottlenecks.',
-      'Designed and developed a custom Slack bot using pre-set workflows to categorize and route requests.',
-      'Worked closely with frontline agents to map urgent vs. non-urgent ticket types.',
-      'Coordinated with backend systems (e.g., Telbet) to ensure integration and reporting.',
-      'Led training and adoption across the team.'
+      'Mapped the most common queries and escalation bottlenecks.',
+      'Built a Slack bot that auto-routes requests by topic and urgency.',
+      'Trained the team on the new workflow.'
     ],
     impact: [
-      'Resolution time dropped by 20% in the first month post-implementation.',
-      'Team reported smoother collaboration and less friction in escalation paths.',
-      'Allowed supervisors to focus more on coaching, not triaging.'
+      'Resolution time down 20% in month one.',
+      'Smoother handoffs between agents.',
+      'Supervisors coaching instead of triaging.'
     ],
     impactHighlight: '-20% resolution time',
     skills: ['Slack API', 'Agile sprint planning', 'automation logic design', 'stakeholder training', 'root cause analysis'],
@@ -119,28 +115,73 @@ export const projects: Project[] = [
     order: 4
   },
   {
+    id: 'project-6',
+    title: 'Telephone system overhaul',
+    company: 'Betfair',
+    timeline: '2024 – 2025',
+    role: 'Customer Service Team Lead',
+    tagline: 'The phone system was older than some of the team. We replaced it end to end.',
+    overview: 'The existing phone setup was dragging down call routing and reporting. It needed a full rebuild, not a patch.',
+    actions: [
+      'Scoped requirements and evaluated vendors.',
+      'Managed the vendor relationship through implementation.',
+      'Planned the migration and trained the team.'
+    ],
+    impact: [
+      'Better call routing and shorter wait times.',
+      'Clean reporting for the first time.',
+      'Smooth transition with no service gaps.'
+    ],
+    impactHighlight: 'Full system rebuild',
+    skills: ['project management', 'vendor management', 'change management', 'requirements elicitation'],
+    featured: false,
+    order: 5
+  },
+  {
+    id: 'project-7',
+    title: 'Telbet UI improvements',
+    company: 'Betfair',
+    timeline: '2024 – 2025',
+    role: 'Customer Service Team Lead',
+    tagline: 'The tool agents used all day fought them at every click. We redesigned it around how they actually work.',
+    overview: "Telbet's interface was slowing down the exact people who used it most. Small friction, repeated hundreds of times a day, adds up fast.",
+    actions: [
+      'Collected pain points directly from agents.',
+      'Turned feedback into concrete design changes.',
+      'Ran usability testing before rollout.'
+    ],
+    impact: [
+      'Lower cognitive load for agents.',
+      'Faster daily workflows.',
+      'Higher satisfaction with the tool.'
+    ],
+    impactHighlight: 'UX overhaul',
+    skills: ['UI/UX implementation', 'usability testing', 'stakeholder collaboration'],
+    featured: false,
+    order: 6
+  },
+  {
     id: 'project-4',
     title: 'Service optimization & process coaching',
     company: 'Sportsbet',
     timeline: '2023 – 2024',
     role: 'Customer Service Advisor',
-    tagline: 'Outdated scripts and rigid processes were holding customer service KPIs below target.',
-    overview: 'Customer service KPIs were below target, and internal team feedback highlighted outdated scripts and a lack of flexibility in handling complex queries.',
+    tagline: 'Scripts were stale and KPIs were sliding. Rebuilt both from the ground up.',
+    overview: "Customer service KPIs had stalled. The scripts agents worked from hadn't kept pace with the questions customers actually asked.",
     actions: [
-      'Initiated service improvement sessions focused on agent feedback loops.',
-      'Created updated response scripts based on sentiment analysis and call review.',
-      'Introduced a peer coaching system for junior advisors.',
-      'Monitored KPIs using custom dashboards to track first-call resolution and CSAT.'
+      'Ran feedback sessions with the team.',
+      'Rewrote scripts based on sentiment and call review.',
+      'Introduced peer coaching for junior advisors.'
     ],
     impact: [
-      '15% increase in first-call resolution.',
-      '20% reduction in call handling time.',
-      '10% lift in customer satisfaction scores over 6 months.'
+      'First-call resolution up 15%.',
+      'Handling time down 20%.',
+      'CSAT up 10% over six months.'
     ],
     impactHighlight: '+10% CSAT',
-    skills: ['CX strategy', 'peer coaching', 'real-time analytics', 'operational improvement', 'customer sentiment mapping'],
+    skills: ['CX strategy', 'peer coaching', 'real-time analytics', 'operational improvement'],
     featured: false,
-    order: 5
+    order: 7
   },
   {
     id: 'project-5',
@@ -148,23 +189,22 @@ export const projects: Project[] = [
     company: 'Genpact',
     timeline: '2010 – 2012',
     role: 'Assistant Project Manager',
-    tagline: 'Legacy finance reporting took hours of manual compilation every cycle.',
-    overview: 'Legacy reporting processes in finance ops required hours of manual compilation and review. The leadership team needed faster, automated, and more visual reporting.',
+    tagline: 'Finance ran on manual reports that took all day to build. We automated the boring part.',
+    overview: 'Legacy finance reporting ate hours of manual compilation every single cycle. Leadership needed it faster and easier to read.',
     actions: [
-      'Identified inefficiencies and mapped out automation opportunities.',
-      'Implemented automated workflows using internal tools and Excel VBA.',
-      'Led stakeholder workshops to validate KPIs and reporting logic.',
-      'Streamlined approvals and automated exception reporting.'
+      'Mapped inefficiencies and automation opportunities.',
+      'Built automated workflows with Excel VBA.',
+      'Ran stakeholder workshops to lock down KPIs and logic.'
     ],
     impact: [
-      '50% reduction in reporting time.',
-      '15% cost reduction through better resource allocation and tooling.',
-      'Enabled faster decision-making in daily ops reviews.'
+      'Reporting time down 50%.',
+      'Costs down 15% through better tooling.',
+      'Faster daily decision-making.'
     ],
     impactHighlight: '-50% reporting time',
-    skills: ['Process automation', 'VBA', 'Excel macros', 'stakeholder facilitation', 'Lean thinking'],
+    skills: ['process automation', 'VBA', 'Excel macros', 'stakeholder facilitation', 'Lean thinking'],
     featured: false,
-    order: 6
+    order: 8
   }
 ];
 
@@ -175,14 +215,3 @@ export const getAllProjectsOrdered = () =>
   [...projects].sort((a, b) => a.order - b.order);
 
 export const getProjectById = (id: string) => projects.find((p) => p.id === id);
-
-export const toolkit = [
-  'Agile / Scrum',
-  'Stakeholder management',
-  'Tableau',
-  'KYC / compliance',
-  'Process automation',
-  'Zapier',
-  'Risk & controls',
-  'Cross-functional delivery'
-];
