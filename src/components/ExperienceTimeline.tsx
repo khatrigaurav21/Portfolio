@@ -20,7 +20,7 @@ const ExperienceTimeline = () => {
         transition={{ duration: 0.5 }}
         className="mb-14"
       >
-        <p className="text-xs tracking-[0.2em] uppercase text-amber-400/90 mb-3">Experience</p>
+        <p className="text-xs font-mono tracking-[0.2em] uppercase text-amber-400/90 mb-3">Experience</p>
         <h2 className="text-3xl sm:text-4xl font-medium text-white">Four companies. One recurring job.</h2>
       </motion.div>
 
@@ -42,7 +42,7 @@ const ExperienceTimeline = () => {
               className="relative pl-10"
             >
               <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-ink border-2 border-amber-400" />
-              <p className="text-xs text-gray-500 mb-1">{role.timeline} &middot; {role.location}</p>
+              <p className="text-xs font-mono text-gray-500 mb-1">{role.timeline} &middot; {role.location}</p>
               <h3 className="text-lg font-medium text-white">{role.role}</h3>
               <p className="text-sm text-amber-400/90 mb-3">{role.company}</p>
               <p className="text-gray-300 mb-3 italic">{role.hook}</p>

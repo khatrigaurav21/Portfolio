@@ -10,7 +10,7 @@ const SkillsBand = () => {
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-xs tracking-[0.2em] uppercase text-amber-400/90 mb-8 px-6 sm:px-10 lg:px-20"
+        className="text-xs font-mono tracking-[0.2em] uppercase text-amber-400/90 mb-8 px-6 sm:px-10 lg:px-20"
       >
         The toolkit
       </motion.p>

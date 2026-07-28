@@ -14,6 +14,10 @@ export interface Project {
   order: number;
   externalLink?: string;
   linkLabel?: string;
+  accent?: string;
+  image?: string;
+  imageAlt?: string;
+  secondaryLink?: { url: string; label: string };
 }
 
 export const projects: Project[] = [
@@ -41,7 +45,40 @@ export const projects: Project[] = [
     featured: true,
     order: 1,
     externalLink: 'https://github.com/khatrigaurav21/Automated-Credit-Case-Tracking-Reporting-System-Prototype-',
-    linkLabel: 'View repo & demo'
+    linkLabel: 'View repo & demo',
+    accent: '#fbbf24',
+    image: '/projects/credit-demo.gif',
+    imageAlt: 'Credit case tracking automation demo',
+    secondaryLink: { url: '/projects/credit-architecture.png', label: 'View architecture diagram' }
+  },
+  {
+    id: 'dojo64',
+    title: 'Dojo64 — Harada Method goal planner',
+    company: 'Personal project',
+    timeline: '2026',
+    role: 'Builder',
+    tagline: 'Ambitious goals get written down once and forgotten. I built a tool that forces one into 64 daily actions.',
+    overview: 'Goal-setting without structure doesn\'t survive a normal week. Dojo64 digitizes the Harada Method — the 8x8 grid Shohei Ohtani used to map his own career at 16 — turning one goal into 8 supporting pillars and 64 concrete tasks, then tracks daily progress against it instead of letting it rot in a notes app.',
+    actions: [
+      'Designed and built the full product end to end: goal input, AI-generated 8x8 grid, daily focus panel, and weekly reflection.',
+      'Built a custom design system from scratch — typography, color tokens, motion — rather than defaulting to a stock UI kit.',
+      'Wired up Supabase edge functions for AI-assisted grid generation and task expansion.',
+      'Shipped light/dark theming, a gallery of example plans, and shareable plan links with PNG export.'
+    ],
+    impact: [
+      'Fully working end-to-end product, not a mockup — live grid, daily tracking, and weekly reflection.',
+      'Custom design system refined through multiple rounds of UX audit and critique.',
+      'Same instinct as everything else on this list — spot an unstructured process, replace it with a system — pointed at my own goal planning instead of an employer\'s.'
+    ],
+    impactHighlight: 'Full product, shipped',
+    skills: ['Product design', 'React', 'TypeScript', 'Tailwind CSS', 'design systems', 'Supabase', 'UX critique & iteration'],
+    featured: true,
+    order: 2,
+    externalLink: 'https://dojo64.vercel.app',
+    linkLabel: 'Try it live',
+    accent: '#38bdf8',
+    image: '/projects/dojo64-og.jpg',
+    imageAlt: 'Dojo64 8x8 goal grid interface'
   },
   {
     id: 'project-2',
@@ -66,7 +103,8 @@ export const projects: Project[] = [
     impactHighlight: '-40% fraud loss',
     skills: ['Agile project delivery', 'stakeholder management', 'compliance', 'CRM integration', 'fraud control metrics', 'UI/UX feedback loops'],
     featured: true,
-    order: 2
+    order: 3,
+    accent: '#fb7185'
   },
   {
     id: 'project-3',
@@ -89,7 +127,8 @@ export const projects: Project[] = [
     impactHighlight: '+30% retention',
     skills: ['Tableau', 'Power BI', 'client success management', 'cross-functional coordination', 'data storytelling'],
     featured: true,
-    order: 3
+    order: 4,
+    accent: '#34d399'
   },
   {
     id: 'project-1',
@@ -112,7 +151,7 @@ export const projects: Project[] = [
     impactHighlight: '-20% resolution time',
     skills: ['Slack API', 'Agile sprint planning', 'automation logic design', 'stakeholder training', 'root cause analysis'],
     featured: false,
-    order: 4
+    order: 5
   },
   {
     id: 'project-6',
@@ -135,7 +174,7 @@ export const projects: Project[] = [
     impactHighlight: 'Full system rebuild',
     skills: ['project management', 'vendor management', 'change management', 'requirements elicitation'],
     featured: false,
-    order: 5
+    order: 6
   },
   {
     id: 'project-7',
@@ -158,7 +197,7 @@ export const projects: Project[] = [
     impactHighlight: 'UX overhaul',
     skills: ['UI/UX implementation', 'usability testing', 'stakeholder collaboration'],
     featured: false,
-    order: 6
+    order: 7
   },
   {
     id: 'project-4',
@@ -181,7 +220,7 @@ export const projects: Project[] = [
     impactHighlight: '+10% CSAT',
     skills: ['CX strategy', 'peer coaching', 'real-time analytics', 'operational improvement'],
     featured: false,
-    order: 7
+    order: 8
   },
   {
     id: 'project-5',
@@ -204,7 +243,7 @@ export const projects: Project[] = [
     impactHighlight: '-50% reporting time',
     skills: ['process automation', 'VBA', 'Excel macros', 'stakeholder facilitation', 'Lean thinking'],
     featured: false,
-    order: 8
+    order: 9
   }
 ];
 

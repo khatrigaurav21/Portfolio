@@ -4,9 +4,15 @@ export const hero = {
   hook: 'Most teams manage a broken process by hand. I get paid to notice, then fix it.',
   body: [
     "15 years across banking, fintech, and customer service. Same job every time. Find the process nobody wants to admit is broken, then replace it with one that works.",
-    'RBS. Illion. Betfair. Different industries, same pattern: manual work nobody enjoyed, replaced with something faster and provably better. Fraud losses down 40%. Retention up 30%. Resolution time down 20%.'
+    'RBS. Illion. Betfair. Different industries, same pattern: manual work nobody enjoyed, replaced with something faster and provably better.'
   ]
 };
+
+export const heroStats = [
+  { value: 40, prefix: '-', suffix: '%', label: 'Fraud losses' },
+  { value: 30, prefix: '+', suffix: '%', label: 'Retention' },
+  { value: 20, prefix: '-', suffix: '%', label: 'Resolution time' }
+];
 
 export const toolkit = [
   'Agile / Scrum',
@@ -29,6 +35,8 @@ export const education = [
 ];
 
 export const certifications = [
+  { name: 'Project Management Professional (PMP)®', institution: 'PMI', year: '2026' },
+  { name: 'Diploma of Project Management', institution: 'Darwin', year: '2021' },
   { name: 'Certificate in Data Analytics', year: '2024' },
   { name: 'Future Leaders Program', institution: 'Illion Australia', year: '2021' },
   { name: 'National Employment Police Check' }

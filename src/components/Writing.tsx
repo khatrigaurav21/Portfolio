@@ -27,7 +27,7 @@ const Writing = () => {
         transition={{ duration: 0.4 }}
         className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8"
       >
-        <p className="text-xs uppercase tracking-widest text-gray-500 shrink-0">Off-hours writing</p>
+        <p className="text-xs font-mono uppercase tracking-widest text-gray-500 shrink-0">Off-hours writing</p>
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
           {articles.map((article) => (
             <a

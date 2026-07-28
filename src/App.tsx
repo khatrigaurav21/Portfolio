@@ -7,10 +7,14 @@ import EducationSection from './components/EducationSection';
 import Writing from './components/Writing';
 import ContactSection from './components/ContactSection';
 import ScrollProgress from './components/ScrollProgress';
+import Preloader from './components/Preloader';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   return (
     <div className="min-h-screen bg-ink">
+      <Preloader />
+      <CustomCursor />
       <Header />
       <ScrollProgress />
       <main>

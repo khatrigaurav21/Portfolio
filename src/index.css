@@ -10,6 +10,12 @@ body {
   @apply bg-ink text-ivory;
 }
 
+.cursor-none-custom,
+.cursor-none-custom a,
+.cursor-none-custom button {
+  cursor: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

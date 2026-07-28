@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import { hero } from '../data/profile';
+import { hero, heroStats } from '../data/profile';
+import Magnetic from './Magnetic';
+import CountUp from './CountUp';
 
 const container = {
   hidden: {},
@@ -21,7 +23,7 @@ const Hero = () => {
           initial="hidden"
           animate="show"
         >
-          <motion.p variants={item} className="text-xs sm:text-sm tracking-[0.2em] uppercase text-amber-400/90 mb-6">
+          <motion.p variants={item} className="text-xs sm:text-sm font-mono tracking-[0.2em] uppercase text-amber-400/90 mb-6">
             {hero.eyebrow}
           </motion.p>
 
@@ -39,28 +41,45 @@ const Hero = () => {
             </motion.p>
           ))}
 
+          <motion.div variants={item} className="flex flex-wrap gap-8 mt-6 mb-2">
+            {heroStats.map((stat) => (
+              <div key={stat.label}>
+                <p className="text-3xl sm:text-4xl font-mono font-medium text-amber-400">
+                  <CountUp value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
+                </p>
+                <p className="text-xs uppercase tracking-widest text-gray-500 mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </motion.div>
+
           <motion.div variants={item} className="flex flex-wrap gap-4 mt-8">
-            <a
-              href="#work"
-              className="inline-flex items-center px-6 py-3 rounded-md bg-amber-400 text-gray-900 font-medium hover:bg-amber-300 transition-colors"
-            >
-              See the work
-            </a>
-            <a
-              href="/Resume.pdf"
-              download
-              className="inline-flex items-center px-6 py-3 rounded-md border border-white/20 text-white font-medium hover:bg-white/5 transition-colors"
-            >
-              Download resume
-            </a>
-            <a
-              href="https://www.linkedin.com/in/kha3gaurav"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 rounded-md border border-white/20 text-white font-medium hover:bg-white/5 transition-colors"
-            >
-              LinkedIn
-            </a>
+            <Magnetic>
+              <a
+                href="#work"
+                className="inline-flex items-center px-6 py-3 rounded-md bg-amber-400 text-gray-900 font-medium hover:bg-amber-300 transition-colors"
+              >
+                See the work
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a
+                href="/Resume.pdf"
+                download
+                className="inline-flex items-center px-6 py-3 rounded-md border border-white/20 text-white font-medium hover:bg-white/5 transition-colors"
+              >
+                Download resume
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a
+                href="https://www.linkedin.com/in/kha3gaurav"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 rounded-md border border-white/20 text-white font-medium hover:bg-white/5 transition-colors"
+              >
+                LinkedIn
+              </a>
+            </Magnetic>
           </motion.div>
         </motion.div>
 
@@ -104,7 +123,7 @@ const Hero = () => {
         >
           <ChevronDown size={18} />
         </motion.span>
-        <span className="text-xs uppercase tracking-widest">Scroll</span>
+        <span className="text-xs font-mono uppercase tracking-widest">Scroll</span>
       </motion.div>
     </section>
   );
